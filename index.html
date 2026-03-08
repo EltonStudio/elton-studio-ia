@@ -6,101 +6,115 @@
 <title>ELTON APK STUDIO</title>
 
 <style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#0b0b0b;
-color:white;
-text-align:center;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: white;
+    text-align: center;
 }
 
-header{
-background:#00ffcc;
-color:black;
-padding:15px;
-font-size:22px;
-font-weight:bold;
+header {
+    background: #00ffcc;
+    color: black;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 255, 204, 0.3);
 }
 
-.container{
-padding:15px;
+.container {
+    padding: 15px;
 }
 
-.login{
-margin-top:80px;
+.login {
+    margin-top: 80px;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    border: 1px solid #333;
 }
 
-input, textarea{
-width:95%;
-max-width:500px;
-padding:12px;
-margin:6px;
-border-radius:8px;
-border:none;
-font-size:16px;
+input, textarea {
+    width: 95%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 6px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    font-size: 16px;
+    background: #222;
+    color: white;
 }
 
-textarea{
-height:220px;
+textarea {
+    height: 220px;
+    font-family: monospace;
 }
 
-button{
-padding:14px;
-margin:10px;
-font-size:18px;
-background:#00ffcc;
-border:none;
-border-radius:10px;
-cursor:pointer;
+button {
+    padding: 14px 30px;
+    margin: 10px;
+    font-size: 18px;
+    background: #00ffcc;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-button:hover{
-background:#00e6b8;
+button:hover {
+    background: #00e6b8;
+    transform: scale(1.05);
 }
 
-.painel{
-display:none;
+.painel {
+    display: none;
 }
 
-.simulador{
-margin-top:20px;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:25px;
+.simulador {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }
 
-.celular{
-width:300px;
-height:520px;
-border:8px solid black;
-border-radius:25px;
-overflow:hidden;
-background:white;
+.celular {
+    width: 300px;
+    height: 520px;
+    border: 12px solid #222;
+    border-radius: 35px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
 }
 
-.pc{
-width:95%;
-max-width:600px;
-height:300px;
-border:8px solid black;
-overflow:hidden;
-background:white;
+.pc {
+    width: 95%;
+    max-width: 700px;
+    height: 400px;
+    border: 12px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
 }
 
-iframe{
-width:100%;
-height:100%;
-border:none;
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
-.info{
-margin-top:10px;
-font-size:14px;
-opacity:0.8;
+.info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #00ffcc;
 }
-
 </style>
 </head>
 
@@ -112,105 +126,88 @@ ELTON APK STUDIO
 
 <div class="container">
 
-<div class="login" id="login">
+    <div class="login" id="login">
+        <h2>Área Protegida</h2>
+        <p>Acesse o seu estúdio de criação</p>
+        <input type="password" id="senha" placeholder="Digite a senha (120586)">
+        <br>
+        <button onclick="entrar()">ENTRAR NO SISTEMA</button>
+    </div>
 
-<h2>Área Protegida</h2>
+    <div class="painel" id="painel">
+        <h2>Criar Aplicativo</h2>
+        <input id="nomeApp" placeholder="Nome do Aplicativo">
+        <input id="criador" placeholder="Nome do Criador">
+        <input id="versao" placeholder="Versão do App" value="1.0.0">
 
-<input type="password" id="senha" placeholder="Digite a senha">
-
-<br>
-
-<button onclick="entrar()">ENTRAR</button>
-
+        <p>Código HTML do seu Aplicativo</p>
+        <textarea id="codigo">
+<div style="text-align:center; padding:20px; font-family: sans-serif;">
+    <h1 style="color:#007bff;">Meu Aplicativo Elton</h1>
+    <p>Este app foi criado no Elton APK Studio.</p>
+    <button style="padding:10px; background:green; color:white; border:none; border-radius:5px;" onclick="alert('Funciona!')">
+        Testar Sistema
+    </button>
 </div>
+        </textarea>
 
-<div class="painel" id="painel">
+        <br>
+        <button onclick="simular()">SIMULAR AGORA</button>
 
-<h2>Criar Aplicativo</h2>
+        <div class="simulador">
+            <div>
+                <h3>Visualização Mobile</h3>
+                <div class="celular">
+                    <iframe id="previewMobile"></iframe>
+                </div>
+            </div>
 
-<input id="nomeApp" placeholder="Nome do Aplicativo">
+            <div>
+                <h3>Visualização PC</h3>
+                <div class="pc">
+                    <iframe id="previewPC"></iframe>
+                </div>
+            </div>
+        </div>
 
-<input id="criador" placeholder="Nome do Criador">
-
-<input id="versao" placeholder="Versão do App">
-
-<p>Código do aplicativo</p>
-
-<textarea id="codigo">
-
-<h1 style="text-align:center;">Meu Primeiro App</h1>
-
-<p style="text-align:center;">Criado no Elton APK Studio</p>
-
-<button onclick="alert('App funcionando!')">
-Testar botão
-</button>
-
-</textarea>
-
-<br>
-
-<button onclick="simular()">SIMULAR APP</button>
-
-<div class="simulador">
-
-<div>
-<h3>Simulação Celular</h3>
-
-<div class="celular">
-<iframe id="previewMobile"></iframe>
-</div>
-</div>
-
-<div>
-<h3>Simulação Computador</h3>
-
-<div class="pc">
-<iframe id="previewPC"></iframe>
-</div>
-</div>
-
-</div>
-
-<p class="info">
-Cole qualquer código HTML para testar o aplicativo
-</p>
-
-</div>
+        <p class="info">
+            Pronto para exportar seu APK? Cole o código e clique em simular.
+        </p>
+    </div>
 
 </div>
 
 <script>
-
-function entrar(){
-
-let senha = document.getElementById("senha").value;
-
-if(senha === "123456"){
-
-document.getElementById("login").style.display="none";
-document.getElementById("painel").style.display="block";
-
-}else{
-
-alert("Senha incorreta");
-
+function entrar() {
+    // Pega o valor digitado
+    const senhaDigitada = document.getElementById("senha").value;
+    
+    // VERIFICAÇÃO DA NOVA SENHA
+    if (senhaDigitada === "120586") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("painel").style.display = "block";
+    } else {
+        alert("Senha incorreta! Tente novamente.");
+        document.getElementById("senha").value = ""; // Limpa o campo
+    }
 }
 
+function simular() {
+    const conteudo = document.getElementById("codigo").value;
+    const mobile = document.getElementById("previewMobile");
+    const pc = document.getElementById("previewPC");
+
+    // Aplica o código nos iframes
+    mobile.srcdoc = conteudo;
+    pc.srcdoc = conteudo;
 }
 
-function simular(){
-
-let codigo = document.getElementById("codigo").value;
-
-let mobile = document.getElementById("previewMobile");
-let pc = document.getElementById("previewPC");
-
-mobile.srcdoc = codigo;
-pc.srcdoc = codigo;
-
-}
-
+// Permite apertar "Enter" para logar
+document.getElementById("senha").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        entrar();
+    }
+});
 </script>
 
 </body>
