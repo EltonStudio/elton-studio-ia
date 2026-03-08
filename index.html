@@ -1,0 +1,54 @@
+index.html<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELTON STUDIO IA & TR CAMELO</title>
+    <style>
+        body { background: #0f0f0f; color: #fff; font-family: sans-serif; text-align: center; }
+        .container { padding: 20px; }
+        .btn { background: #238636; color: white; border: none; padding: 15px; margin: 10px; border-radius: 5px; cursor: pointer; width: 80%; }
+        .studio-box { border: 2px solid #3081f7; padding: 15px; border-radius: 10px; margin-top: 20px; }
+        #admin-panel { display: none; background: #1c1c1c; padding: 15px; border: 1px solid gold; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ELTON STUDIO IA</h1>
+        <p>Bem-vindo ao centro de produção musical e logística.</p>
+        
+        <div class="studio-box">
+            <h3>🎹 Elton Teclas & Voz</h3>
+            <button class="btn" onclick="alert('Iniciando Gravação de Voz...')">🎙️ Gravar Voz IA</button>
+            <button class="btn" onclick="alert('Abrindo Teclado Musical...')">🎹 Abrir Elton Teclas</button>
+        </div>
+
+        <div class="studio-box">
+            <h3>🚛 TR Camelo - Funcionários</h3>
+            <button class="btn" onclick="alert('Ponto batido com sucesso!')">📅 Bater Ponto</button>
+            <button class="btn" onclick="alert('Relatório de Manutenção enviado!')">🛠️ Relatório Veicular</button>
+        </div>
+
+        <hr>
+        <button class="btn" style="background: #444;" onclick="checkAdmin()">🔑 Acesso do Proprietário</button>
+
+        <div id="admin-panel">
+            <h2 style="color: gold;">PAINEL ELTON JONISON</h2>
+            <p>Acesso total às finanças e gestão da TR Camelo liberado.</p>
+            <button class="btn" style="background: #d73a49;">📊 Ver Lucros TR Camelo</button>
+        </div>
+    </div>
+
+    <script>
+        function checkAdmin() {
+            let nome = prompt("Digite seu nome de Proprietário:");
+            if (nome && nome.toUpperCase() === "ELTON JONISON") {
+                alert("Acesso concedido, Elton!");
+                document.getElementById('admin-panel').style.display = 'block';
+            } else {
+                alert("Acesso negado. Apenas o proprietário pode ver estes dados.");
+            }
+        }
+    </script>
+</body>
+</html>
