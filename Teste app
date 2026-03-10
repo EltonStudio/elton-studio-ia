@@ -1,0 +1,35 @@
+# ID DA IMAGEM DE ENTRADA: image_9.png (Foto original da selfie no espelho)
+
+# --- DEFINIÇÕES GERAIS ---
+ESTILO: Fotografia cinematográfica de alta resolução, fotorrealista.
+ILUMINAÇÃO: Iluminação de estúdio dramática e tecnológica. Fontes de luz principais: painéis de LED brancos frios no teto, luzes de acento neon verdes dos monitores. Luz de preenchimento suave.
+ATMOSFERA: Neblina industrial leve e fumaça atmosférica sutil, concentrada ao redor dos racks de servidores.
+
+# --- SUJEITO PRINCIPAL (BASEADO NA FOTO DE ENTRADA) ---
+PONTOS DE REFERÊNCIA DE IDENTIDADE: Manter a identidade facial, óculos de grau com armação dourada fina, penteado de rabo de cavalo e pose exata da mulher em image_9.png.
+VESTUÁRIO: Mesma blusa de treino preta de manga curta e shorts pretos justos. Mesmos tênis pretos com sola branca.
+AÇÃO: Segurando o mesmo smartphone rosa na mão direita para tirar uma selfie no espelho, com a mão esquerda no quadril.
+
+# --- AMBIENTE DE FUNDO (TRANSFORMAÇÃO) ---
+TIPO: Centro de dados futurista e industrial, high-tech.
+ELEMENTOS DE TETO: Complexa rede de tubulações de metal expostas, conduítes e luminárias de LED industriais, cobrindo todo o teto.
+RACKS DE SERVIDORES: Racks de servidores de metal de altura total, preenchidos com lâminas de servidor piscando com LEDs verdes e vermelhos fracos, dispostos em fileiras atrás do sujeito.
+TELAS DE MONITORAMENTO:
+    - MONITOR 1 (SUPERIOR ESQUERDO): Tela de fósforo verde CRT retro-futurista.
+        TEXTO VERDE: "SYSTEM_LOAD: OPTIMAL"
+        TEXTO VERDE (LINHA ABAIXO): "CORE_TEMP: 42°C"
+    - MONITOR 2 (INFERIOR ESQUERDO): Painel de controle digital plano com botões físicos e luzes indicadoras (vermelho, verde).
+        TEXTO DIGITAL VERDE: "SYSTEM_LOAD: OPT"
+        TEXTO DIGITAL VERDE (LINHA ABAIXO): "CORE_TEMP: 42°C"
+ESQUEMÁTICO: Um diagrama esquemático de circuito gravado a laser na parede de metal atrás do Monitor 1.
+SUPERFÍCIES: Paredes e chão de metal industrial cinza.
+
+# --- COMPOSIÇÃO E EFEITOS ---
+ENQUADRAMENTO: Selfie no espelho, plano médio-longo, capturando a maior parte do corpo.
+EFEITO DE ESPELHO: O espelho (no canto inferior esquerdo) deve ter uma borda texturizada e distorcida, como metal líquido ou vidro quebrado, refletindo a cena de forma abstrata.
+FOCO: Foco nítido no sujeito e nos monitores de primeiro plano; fundo dos racks de servidores ligeiramente suavizado pela neblina.
+CORES ESPECÍFICAS DO TEXTO: Usar a cor hexagonal exata para o verde digital (#00FF00) para todo o texto e gráficos de monitor.
+
+# --- PÓS-PROCESSAMENTO ---
+GRÃO DA IMAGEM: Adicionar um leve grão de filme para textura.
+CORREÇÃO DE COR: Ajustar o balanço de branco para um tom ligeiramente frio, enfatizando os verdes e cinzas industriais.
